@@ -1,0 +1,303 @@
+@mixin medium-up {
+  @media only screen and (min-width: 1024px) { @content; }  
+}
+
+body {
+  font-family: UniversLTStd, ProximaNova-Regular, 'Sans-serif';
+}
+
+.mobile-only {
+  @include medium-up {   
+    display: none;
+  }
+}
+
+.container {
+  width: 100vw;
+  
+  @include medium-up {   
+    height: 100vh;
+  }  
+}
+
+.main-logo {
+  display: block;
+  height: 100px;
+  margin-top: 45px;
+  margin-left: 25px;
+  position: absolute;
+  
+  @include medium-up {    
+    height: 140px;
+  }
+}
+
+p {
+  font-family: 'UniversLTStd-Light';
+  letter-spacing: 1px;
+  line-height: 1.4;  
+  font-size: 12px;  
+  
+  @include medium-up {   
+    width: 64%;
+  }
+
+  &.disclaimer {
+    font-size: 8px;
+    padding: 20px;
+    line-height: 1.5;
+
+    @include medium-up {   
+      display: block;
+    }      
+  }
+}
+
+.charity-copy {
+  margin: 0;
+  color: #fff;
+  font-size: 10px;
+  text-align: left;
+  padding-left: 20px;
+  transition: all 1s ease;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  width: 70%;  
+}
+
+section {
+  @include medium-up {    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.info {
+  padding-left: 21%;
+  width: 80%;
+  padding-top: 100px;
+
+  @include medium-up {    
+    padding-left: 3.125%;
+    z-index: 1;
+    width: 50%;
+  }  
+
+  .disclaimer {
+    display: none;
+  
+    @include medium-up {   
+      display: block;
+    }          
+  }
+
+  h3 {
+    color: #EF4929;
+    font-size: 15px;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+    @include medium-up {
+      font-size: 30px;
+    }
+  }
+
+  .headline-text {
+    display: block;
+    width: 100%;
+
+    @include medium-up {   
+      width: 52%;
+    }      
+  }
+}
+
+.expanded-content {
+
+}
+
+.charities {
+  overflow: hidden;
+  height: calc(100vw * 0.8);
+}
+
+.charity {
+  overflow: hidden;
+  float: right;
+  transition: width 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+  width: calc(100%/3);
+  height: 100%;
+  position: relative;
+
+  .viewable {
+    transform: translate3d(-25%, 0, 0);
+    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: relative;
+    width: 65vw;
+    height: 100%;
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  .mobile-label {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transition: opacity .3s ease-in-out;
+    transform: rotate(90deg);
+    left: 13px;
+    margin: 0;
+    transform-origin: left;
+    width: calc(100vw/3);
+    opacity: 0;
+  }
+  
+  @include medium-up {   
+    width: calc(100%/6);
+  }
+
+  &.open {
+    width: 65%;
+
+    .viewable {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .particle-bg {
+      opacity: 1;
+    }
+
+    .charity-copy {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &.collapsed {
+    width: calc(35%/2);
+
+    .charity-logo {
+      opacity: 0;
+    }
+
+    .mobile-label {
+      opacity: 1;
+    }
+  }
+}
+
+.vote-now {
+  color: #fff;
+  background: #EF4929;
+  border: none;
+  font-family: 'UniversLTStd';
+}
+
+.foreground-image {
+
+  height: 100%;
+  position: absolute;
+  right: 0;    
+}
+
+.charity-logo {
+  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+  z-index: 1;
+}
+
+#interact-logo {
+  width: 26%;
+}
+
+#all-stars-project-logo {
+  width: 26%;
+}
+
+#dreaming-zebra-logo {
+  width: 36%;
+}
+
+.dreaming-zebra {
+  background-position: center center;
+}
+
+.all-stars-project {
+  background-color: #000;
+  background-position: bottom center;
+
+  &.open {
+    .viewable {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .viewable {
+    
+  }
+
+  canvas {
+    filter: blur(5px) contrast(10) saturate(0.8);    
+  }
+}
+
+.interact {
+
+}
+
+#ballerina {
+  width: 60px;
+  position: absolute;
+  bottom: 26%;
+  right: -8%;
+
+  @include medium-up {
+    width: 150px;
+    bottom: 130px;
+    right: 40px;
+  }
+}
+
+#violin {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transform: translate3d(52px, 0, 0);
+}
+
+.particle-bg {
+  transition: opacity 0.4s;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: calc(100vw/3);
+}
+
+.vote-here {
+  display: none;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+
+  &:focus {
+    display: block;
+    outline: none;
+  }
+}
