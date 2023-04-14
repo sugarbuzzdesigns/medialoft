@@ -269,8 +269,9 @@
         }
       })
 
-      _this.$workCover.on("click, tap", function () {
+      _this.$workCover.on("click, tap", function (e) {
         console.log("from work cover click")
+        e.stopPropagation()
         _this.openWorkItem($(this).parent())
         $(this).parent().removeClass("active")
       })
