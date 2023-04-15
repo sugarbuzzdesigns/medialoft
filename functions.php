@@ -137,6 +137,10 @@ function medialoft_scripts() {
 		wp_enqueue_script( 'sine-waves', get_template_directory_uri() . '/assets/js/sine-waves.js', array( 'jquery' ), true );
 		wp_enqueue_script( 'dreaming-zebra-waves', get_template_directory_uri() . '/assets/js/dreaming-zebra-waves.js', array( 'jquery' ), true );
 	}
+
+	if(is_page('capabilities')){
+		wp_enqueue_style( 'capabilities', get_template_directory_uri() . '/assets/css/capabilities.css', array(), $ctime );
+	}
 	
 	if(is_page('work')){
 		$workctime = filemtime( get_template_directory() . '/assets/js/src/modules/work.js' );

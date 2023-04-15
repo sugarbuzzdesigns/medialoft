@@ -1,0 +1,30 @@
+.page-capabilities .capabilities {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.page-capabilities .sidebar {
+  background: #ef4929;
+  padding: 130px 50px 50px 75px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+}
+.page-capabilities .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.page-capabilities .grid .grid-item {
+  font-size: 28px;
+  color: #ef4929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-capabilities .grid div:nth-child(odd) {
+  background-color: #282a28;
+}
+.page-capabilities .grid div:nth-child(even) {
+  background-color: #252725;
+}
+
+/*# sourceMappingURL=capabilities.css.map */

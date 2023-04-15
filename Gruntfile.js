@@ -48,10 +48,10 @@ module.exports = function (grunt) {
         files: ["assets/scss/**/*.scss"],
         tasks: ["css-build"],
       },
-      // cssGoVirtual: {
-      //   files: ['assets/scss/pages/go-virtual.scss'],
-      //   tasks: ['css-build-go-virtual'],
-      // },
+      csscapabilities: {
+        files: ["assets/scss/pages/capabilities.scss"],
+        tasks: ["css-capabilities"],
+      },
       js: {
         files: ["assets/js/src/**/*.js"],
         tasks: ["js-build"],
@@ -149,7 +149,7 @@ module.exports = function (grunt) {
           "assets/css/breakpoints.css": "assets/scss/breakpoints.scss",
         },
       },
-      goVirtual: {
+      capabilities: {
         // Target
         options: {
           // Target options
@@ -157,7 +157,7 @@ module.exports = function (grunt) {
         },
         files: {
           // Dictionary of files
-          "assets/css/go-virtual.css": "assets/scss/pages/go-virtual.scss",
+          "assets/css/capabilities.css": "assets/scss/pages/capabilities.scss",
         },
       },
       dist: {
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-autoprefixer")
   grunt.loadNpmTasks("grunt-contrib-sass")
   // grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.registerTask("css-build-go-virtual", ["sass:goVirtual"])
+  grunt.registerTask("css-capabilities", ["sass:capabilities"])
 
   grunt.registerTask("css-build", [
     "sass:dist",
