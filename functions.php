@@ -139,7 +139,9 @@ function medialoft_scripts() {
 	}
 
 	if(is_page('capabilities')){
+		$ctime = filemtime( get_template_directory() . '/assets/js/src/modules/capabilities.js' );
 		wp_enqueue_style( 'capabilities', get_template_directory_uri() . '/assets/css/capabilities.css', array(), $ctime );
+		wp_enqueue_script( 'work', get_template_directory_uri() . '/assets/js/src/modules/capabilities.js', array( 'jquery' ), $ctime );
 	}
 	
 	if(is_page('work')){
