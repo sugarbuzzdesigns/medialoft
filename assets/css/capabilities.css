@@ -1,0 +1,91 @@
+.page-capabilities .no-wrap {
+  white-space: nowrap;
+}
+.page-capabilities .capabilities {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.page-capabilities .sidebar {
+  background: #ef4929;
+  padding: 50% 15% 50px 17%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+}
+.page-capabilities .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.page-capabilities .grid .grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.page-capabilities .grid .grid-item .play-reel {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+}
+.page-capabilities .grid .grid-item .hover,
+.page-capabilities .grid .grid-item .resting {
+  display: none;
+  position: absolute;
+  padding: 0 40px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.page-capabilities .grid .grid-item .resting {
+  text-align: left;
+  align-items: center;
+}
+.page-capabilities .grid .grid-item .hover {
+  opacity: 0;
+}
+.page-capabilities .grid .grid-item:hover .resting, .page-capabilities .grid .grid-item.clicked .resting, .page-capabilities .grid .grid-item.active .resting {
+  opacity: 0;
+}
+.page-capabilities .grid .grid-item:hover .hover, .page-capabilities .grid .grid-item.clicked .hover, .page-capabilities .grid .grid-item.active .hover {
+  opacity: 1;
+}
+.page-capabilities .grid .grid-item .heading {
+  font-size: 28px;
+  z-index: 1;
+  position: relative;
+  color: #ef4929;
+}
+.page-capabilities .grid .grid-item .copy {
+  font-size: 16px;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  line-height: 1.3;
+}
+.page-capabilities .grid .grid-item .bg-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  z-index: 1;
+  pointer-events: none;
+  background-size: cover;
+  background-position: right;
+}
+.page-capabilities .grid div:nth-child(odd) {
+  background-color: #282a28;
+}
+.page-capabilities .grid div:nth-child(even) {
+  background-color: #252725;
+}
+
+/*# sourceMappingURL=capabilities.css.map */
