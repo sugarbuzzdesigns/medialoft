@@ -25,14 +25,24 @@
         e.preventDefault()
         _this.closeVideo()
       })
+
+      $(document).keydown(function bindKeyDown(e) {
+        if (!!_this.overlayVideo) {
+          if (e.keyCode == 27) {
+            console.log("esc key pressed")
+
+            _this.closeVideo()
+            return false
+          }
+        }
+      })
     },
 
     openVideo: function ($videoTrigger) {
-      console.log($videoTrigger)
       var _this = this,
         videoUrl = $videoTrigger.data("video-url"),
         $video = $(
-          '<video id="capabilities-video-full" width="auto" height="auto" class="video-js vjs-default-skin"></video>'
+          '<video id="capabilities-video-full" class="video-js vjs-default-skin" data-setup=\'{}\'></video>'
         ),
         $capabilitiesVideoSrc = $("<source></source>")
 
@@ -68,7 +78,9 @@
       console.log("close video")
       this.$videoOverlay.removeClass("show-me")
       $("body").removeClass("play-full-video")
-      this.overlayVideo[0].pause()
+      this.capabilitiesVideo.pause()
+      this.capabilitiesVideo.dispose()
+      this.overlayVideo = ""
     },
   }
 

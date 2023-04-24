@@ -1,10 +1,13 @@
+.page-capabilities .no-wrap {
+  white-space: nowrap;
+}
 .page-capabilities .capabilities {
   display: grid;
   grid-template-columns: 25% 75%;
 }
 .page-capabilities .sidebar {
   background: #ef4929;
-  padding: 130px 50px 50px 75px;
+  padding: 50% 15% 50px 17%;
   color: #fff;
   font-size: 18px;
   line-height: 35px;
@@ -75,6 +78,8 @@
   opacity: 0.1;
   z-index: 1;
   pointer-events: none;
+  background-size: cover;
+  background-position: right;
 }
 .page-capabilities .grid div:nth-child(odd) {
   background-color: #282a28;
