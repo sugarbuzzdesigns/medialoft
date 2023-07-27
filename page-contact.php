@@ -54,6 +54,7 @@ wp_reset_query();
 
         <div class="social">
           <a target="_blank" href="https://www.facebook.com/TheMediaLoft"><i class="fa fa-facebook-official"></i></a>
+          <a target="_blank" href="https://twitter.com/medialoft"><i class="fa fa-twitter"></i></a>
           <a target="_blank" href="https://instagram.com/medialoft/"><i class="fa fa-instagram"></i></a>
           <a target="_blank" href="https://www.linkedin.com/company/media-loft"><i class="fa fa-linkedin"></i></a>
         </div>

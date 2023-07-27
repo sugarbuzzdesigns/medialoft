@@ -4906,18 +4906,6 @@ the other stylesheets. Remember, keep it light: Speed is Important.
     animation: none;
   }
 
-  .vjs-default-skin .vjs-loading-spinner:before {
-    content: "\f1ce";
-    font-family: "FontAwesome";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    text-align: center;
-    text-shadow: 0em 0em 0.1em #000;
-  }
-
   @-moz-keyframes spin {
     0% {
       -moz-transform: rotate(0deg);
