@@ -1,15 +1,17 @@
-<?php 
-	global $detect; 
+<?php
+global $detect;
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js <?php if(wp_is_mobile()){ echo 'mobile'; } ?>">
+<html <?php language_attributes(); ?> class="no-js <?php if (wp_is_mobile()) {
+                                                      echo 'mobile';
+                                                    } ?>">
 
 <head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/favicon.png">
   <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
   <meta name="google-site-verification" content="D6JSG8b6vOt3sc2um25kIZTDpkMaXlcM3E27d_r_nh0" />
@@ -17,21 +19,21 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145789708-1"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-145789708-1');
+    gtag('config', 'UA-145789708-1');
   </script>
 </head>
 
 <body <?php body_class(); ?>>
   <?php include('partials/loader.php'); ?>
-  <?php if(is_front_page()) { ?>
-  <!-- <style>
+  <?php if (is_front_page()) { ?>
+    <!-- <style>
   body.home {
     padding-top: 40px;
   }
@@ -121,13 +123,12 @@
       more</a></div> -->
   <?php } ?>
   <div class="wrap">
-    <?php if(is_front_page()) { ?>
-    <a id="main-logo" class="logo" href="<?php echo get_site_url(); ?>/">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/mobile/logos/ML_Logo_@2x.png" alt="Media Loft" />
-    </a>
+    <?php if (is_front_page()) { ?>
+      <a id="main-logo" class="logo" href="<?php echo get_site_url(); ?>/">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/logos/ML_LockUp-Hrz_RGB_GryRed.svg" alt="Media Loft" />
+      </a>
     <?php } else { ?>
-    <a id="main-logo" class="logo interior" href="<?php echo get_site_url(); ?>/">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/mobile/logos/Logo_Red_@2x.png"
-        alt="Media Loft" />
-    </a>
+      <a id="main-logo" class="logo interior" href="<?php echo get_site_url(); ?>/">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/mobile/logos/Logo_Red_@2x.png" alt="Media Loft" />
+      </a>
     <?php } ?>
